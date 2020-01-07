@@ -10,35 +10,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        /**
-         * ПОЛУЧАЕМ ДОСТУП К КНОПКАМ
-         */
-
-        // Цифры
-        val calcOne = findViewById<TextView>(R.id.calcOne)
-        val calcTwo = findViewById<TextView>(R.id.calcTwo)
-        val calcThree = findViewById<TextView>(R.id.calcThree)
-        val calcFour = findViewById<TextView>(R.id.calcFour)
-        val calcFive = findViewById<TextView>(R.id.calcFive)
-        val calcSix = findViewById<TextView>(R.id.calcSix)
-        val calcSeven = findViewById<TextView>(R.id.calcSeven)
-        val calcEight = findViewById<TextView>(R.id.calcEight)
-        val calcNine = findViewById<TextView>(R.id.calcNine)
-        val calcZero = findViewById<TextView>(R.id.calcZero)
-
-        // Операторы
-        val calcPlus = findViewById<TextView>(R.id.calcPlus)
-        val calcMinus = findViewById<TextView>(R.id.calcMinus)
-        val calcMultiple = findViewById<TextView>(R.id.calcMultiple)
-        val calcDiv = findViewById<TextView>(R.id.calcDiv)
-        val calcRemainder = findViewById<TextView>(R.id.calcRemainder)
-        val calcOpen = findViewById<TextView>(R.id.calcOpen)
-        val calcClose = findViewById<TextView>(R.id.calcClose)
-        val calcC = findViewById<TextView>(R.id.calcC)
-
-        // Поля вывода
-        val calcExpression = findViewById<TextView>(R.id.calcExpression)
-        val calcResult = findViewById<TextView>(R.id.calcResult)
 
         fun appendExpression(value: String, isNumber: Boolean) {
             if(isNumber) {
@@ -75,7 +46,6 @@ class MainActivity : AppCompatActivity() {
         calcRemainder.setOnClickListener { appendExpression("%", false) }
         calcOpen.setOnClickListener { appendExpression("(", false) }
         calcClose.setOnClickListener { appendExpression(")", false) }
-
 
     }
 }
